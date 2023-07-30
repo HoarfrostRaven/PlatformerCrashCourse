@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2501530653181819400}
   - component: {fileID: 7876758196132629061}
   - component: {fileID: 1950261681224561620}
+  - component: {fileID: 8752812522626221726}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -130,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 5
   runSpeed: 8
+  jumpImpulse: 10
   _isMoving: 0
   _isRunning: 0
 --- !u!114 &2501530653181819400
@@ -237,6 +239,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: aba8458f-1c5f-499f-86ec-a166ab9b2c3c
     m_ActionName: Player/Run[/Keyboard/leftShift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6766287552326392101}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 99af327f-c327-473a-8357-5db9ba918834
+    m_ActionName: Player/Jump[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -298,3 +316,31 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0044265985, y: -0.21993172}
   m_Size: {x: 0.5310631, y: 1.776552}
   m_Direction: 0
+--- !u!114 &8752812522626221726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778910877701820216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608e700bd072c42e793f1e555f948819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  groundDistance: 0.05
+  _isGrounded: 0
