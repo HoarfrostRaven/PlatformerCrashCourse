@@ -4,6 +4,7 @@ using UnityEngine;
 
 // The following script is used to check if a game object is grounded by casting a 2D ray downwards using a CapsuleCollider2D component.
 // It also updates an Animator's bool parameter "isGrounded" based on the grounded status.
+[RequireComponent(typeof(CapsuleCollider2D), typeof(Animator))]
 public class TouchingDirections : MonoBehaviour
 {
     // A ContactFilter2D used to determine which colliders should be considered when casting the ray.
