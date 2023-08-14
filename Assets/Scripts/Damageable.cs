@@ -6,15 +6,16 @@ public class Damageable : MonoBehaviour
 {
     Animator animator;
     [SerializeField]
-    private float _maxHealth = 100;
-    public float MaxHealth
+    private int _maxHealth = 100;
+    public int MaxHealth
     {
         get { return _maxHealth;}
         set { _maxHealth = value; }
     }
 
-    private float _health = 100;
-    public float Health
+    [SerializeField]
+    private int _health = 100;
+    public int Health
     {
         get { return _health;}
         set 
@@ -29,6 +30,7 @@ public class Damageable : MonoBehaviour
         }
     }
 
+    [SerializeField]
     private bool _isAlive = true;
     public bool IsAlive
     {
@@ -36,24 +38,42 @@ public class Damageable : MonoBehaviour
         set 
         { 
             _isAlive = value;
-            animator.SetBool(AnimationStrings.IsAlive, value);
+            animator.SetBool(AnimationStrings.isAlive, value);
+            Debug.Log("IsAlive set " + value);
         }
     }
+    
+    [SerializeField]
+    private bool isInvincible = false;
+    private float timeSinceHit = 0;
+    public float invincibilitTime = 0.25f;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
+        if(isInvincible)
+        {
+            if(timeSinceHit > invincibilitTime)
+            {
+                isInvincible = false;
+                timeSinceHit = 0;
+            }
+            timeSinceHit += Time.deltaTime;
+        }
+
+        Hit(10);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Hit(int damage)
     {
-        
+        if(IsAlive && !isInvincible)
+        {
+            Health -= damage;
+            isInvincible = true;
+        }
     }
 }
