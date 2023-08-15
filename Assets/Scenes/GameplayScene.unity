@@ -10402,6 +10402,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3077325533786887620, guid: 4f9856ee8b7e94bcf94c53d7f7efad80, type: 3}
+      propertyPath: _health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4882628032978644340, guid: 4f9856ee8b7e94bcf94c53d7f7efad80, type: 3}
       propertyPath: m_GravityScale
       value: 1
