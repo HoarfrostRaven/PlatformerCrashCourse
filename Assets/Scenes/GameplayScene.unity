@@ -10241,9 +10241,21 @@ PrefabInstance:
       propertyPath: castFilter.layerMask.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 371845750240741923, guid: 8962e3860932a4d5b98fa8fae16756c1, type: 3}
+      propertyPath: knockback.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 371845750240741923, guid: 8962e3860932a4d5b98fa8fae16756c1, type: 3}
+      propertyPath: knockback.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2131241306860200363, guid: 8962e3860932a4d5b98fa8fae16756c1, type: 3}
       propertyPath: m_Name
       value: KnightEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597188516029126187, guid: 8962e3860932a4d5b98fa8fae16756c1, type: 3}
+      propertyPath: _health
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8420743977127703239, guid: 8962e3860932a4d5b98fa8fae16756c1, type: 3}
       propertyPath: m_RootOrder
@@ -10251,11 +10263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8420743977127703239, guid: 8962e3860932a4d5b98fa8fae16756c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.6839743
+      value: -8.86
       objectReference: {fileID: 0}
     - target: {fileID: 8420743977127703239, guid: 8962e3860932a4d5b98fa8fae16756c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8010626
+      value: -11.79
       objectReference: {fileID: 0}
     - target: {fileID: 8420743977127703239, guid: 8962e3860932a4d5b98fa8fae16756c1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10406,9 +10418,21 @@ PrefabInstance:
       propertyPath: _health
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 3781457401693224607, guid: 4f9856ee8b7e94bcf94c53d7f7efad80, type: 3}
+      propertyPath: knockback.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3781457401693224607, guid: 4f9856ee8b7e94bcf94c53d7f7efad80, type: 3}
+      propertyPath: knockback.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4882628032978644340, guid: 4f9856ee8b7e94bcf94c53d7f7efad80, type: 3}
       propertyPath: m_GravityScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030055681921290665, guid: 4f9856ee8b7e94bcf94c53d7f7efad80, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8752812522626221726, guid: 4f9856ee8b7e94bcf94c53d7f7efad80, type: 3}
       propertyPath: castFilter.useLayerMask

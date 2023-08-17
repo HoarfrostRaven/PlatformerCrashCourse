@@ -17,4 +17,5 @@ internal class AnimationStrings
     internal static string isAlive = "isAlive";
     internal static string lockVelocity = "lockVelocity";
     internal static string hurtTrigger = "hurt";
+    internal static string attackCooldown = "attackCooldown";
 }
