@@ -8,6 +8,7 @@ public class Damageable : MonoBehaviour
     public UnityEvent<int, Vector2> damageableHit;
 
     Animator animator;
+    
     [SerializeField]
     private int _maxHealth = 100;
     public int MaxHealth
@@ -95,6 +96,7 @@ public class Damageable : MonoBehaviour
             animator.SetTrigger(AnimationStrings.hurtTrigger);
             LockVelocity = true;
             damageableHit?.Invoke(damage, knockback);
+            CharacterEvents.characterDamaged.Invoke(gameObject, damage);
 
             return true;
         }
